@@ -1,0 +1,73 @@
+@import 'variables';
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+.speed-bump {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+
+    display: none;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    width: 100%;
+    height: 100%;
+
+    outline: 0;
+    background-color: $speedbump-bg-color-backdrop;
+
+    font-size: 14px;
+    line-height: normal;
+}
+
+.speed-bump__dialog {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: auto;
+    max-width: $speedbump-max-width-content;
+    min-height: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 0 20px;
+
+    pointer-events: none;
+}
+
+.speed-bump__content {
+    position: relative;
+
+    overflow: hidden;
+    flex-direction: column;
+
+    width: 100%;
+    padding: $speedbump-padding-content;
+
+    pointer-events: auto;
+
+    outline: 0;
+    background-color: $speedbump-bg-color-dialog;
+    background-clip: padding-box;
+    
+    &:focus {
+        outline: 0;
+    }
+}
+
+.js-speedbump-showing {
+    height: 100vh;
+
+    overflow: hidden;
+    
+    .speed-bump {
+        display: block;
+    }
+}

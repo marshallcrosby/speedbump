@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Speedbump Demo</title>
+    
+    <!-- Not required. Using this for the close icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Required for speedbump plugin -->
+    <link rel="stylesheet" href="assets/css/speedbump.css">
+</head>
+<body>
+    <h1>Speedbump</h1>
+    <p><a href="https://test.msc.blendinteractive.com">Ignored link from different domain (with subdomain)</a>, consectetur adipisicing elit. Cum, exercitationem. Quos, architecto? Quia dolor commodi unde velit. Quas vero cum ducimus placeat rem ipsam voluptates tempore sapiente? Sunt, illo illum.</p>
+    <p>Dolorum totam quisquam perferendis accusamus, natus doloribus, illum ad consectetur, minima impedit expedita vero tenetur laborum reiciendis explicabo ut eos! Accusantium quibusdam beatae expedita eaque sunt consequuntur debitis, aspernatur ab.</p>
+    <p>Nobis quod quam magnam soluta cum. Error, officiis? <a href="https://blendinteractive.com">Ignored link from different domain</a> corrupti iure adipisci sapiente nemo eos. Sit architecto quisquam adipisci, error nesciunt cupiditate sed enim libero at perspiciatis quae.</p>
+    <p>Quaerat sed similique repellat temporibus ducimus nam dolores perferendis deleniti, rem unde ipsam cum asperiores harum obcaecati? Libero ex cupiditate atque neque quisquam ullam placeat temporibus ab, pariatur eligendi doloribus!</p>
+    <p>Qui excepturi accusantium unde nostrum eveniet. Optio eius eaque explicabo reiciendis at quibusdam, doloribus unde voluptatem dolorum necessitatibus blanditiis velit deserunt in, exercitationem ea earum autem. Consequatur earum sit minus!</p>
+    <p><a href="https://google.com">Ignored link from different domain</a> voluptatem laboriosam eligendi tempore explicabo aut. Dolor numquam natus, dignissimos debitis harum porro itaque maiores, quidem libero sed ullam velit cum deleniti deserunt rerum amet dolore!</p>
+    <p>Quod magnam ullam a id sed quae voluptates aperiam ad, maxime earum, aliquid cum blanditiis voluptatibus commodi nam nobis vitae ab fugiat voluptatum laborum autem veniam error optio ex. Illum!</p>
+    <p>Officiis nemo fugit assumenda minus eligendi laudantium dicta libero error animi provident optio enim nisi, perferendis aliquam praesentium facere veritatis vel reprehenderit, cupiditate, facilis reiciendis ipsam. Sint blanditiis consequuntur ab.</p>
+    <p>Consectetur ullam asperiores, molestiae deserunt <a href="https://yahoo.com" target="_blank" rel="noopener">Link from different domain that will fire speedbump</a>, temporibus quidem facilis blanditiis velit, nesciunt quaerat maxime dignissimos voluptatum est adipisci aspernatur at expedita repudiandae. Veritatis repellat neque beatae enim excepturi!</p>
+        
+<pre>
+    <code>
+&lt;script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/speedbump.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    $(function() {
+    
+        // Initialize speedbump
+        $.fn.speedBumpModal({
+            'speedBumpTitle': 'You are leaving this website',
+            'speedBumpSummary': 'You are leaving our website and entering a third party website over which we have no control. We do not endorse or guarantee and are not responsible for the content, links, privacy, or security of the website, or the products, services, information, or recommendations offered on this website.',
+            'speedBumpContinueLink': 'Continue',
+            'speedBumpCancelLink': 'Cancel',
+            'speedBumpHeadingTag': '&lt;h2&gt;',
+            'speedBumpCloseIconClass': 'fa fa-times',
+            'speedBumpIgnoreArray': [
+                'blendinteractive.com',
+                'google.com'
+            ],
+        });
+    });
+&lt;/script&gt;
+    </code>
+</pre>
+        
+    <!-- Required javascript linkage -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="assets/js/speedbump.js"></script>
+    
+    <script>
+        $(function() {
+
+            // Initialize speedbump
+            $.fn.speedBumpModal({
+                'speedBumpIgnoreArray': [
+                    'blendinteractive.com',
+                    'google.com'
+                ],
+                'speedBumpTitle': 'You are leaving this website',
+                'speedBumpSummary': 'You are leaving our website and entering a third party website over which we have no control. We do not endorse or guarantee and are not responsible for the content, links, privacy, or security of the website, or the products, services, information, or recommendations offered on this website.',
+                'speedBumpContinueLink': 'Continue',
+                'speedBumpCancelLink': 'Cancel',
+                'speedBumpHeadingTag': '<h2>',
+                'speedBumpCloseIconClass': 'fa fa-times'
+            });
+        });
+    </script>
+</body>
+</html>

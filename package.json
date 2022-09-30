@@ -1,0 +1,55 @@
+{
+    "name": "speedbump",
+    "version": "1.0.0",
+    "description": "Build a modal that fires when outside domain link is activated",
+    "main": "index.php",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "build": "gulp build",
+        "server": "gulp"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "gulp-connect": "^5.7.0",
+        "gulp-open": "^3.0.1",
+        "gulp-remove-empty-lines": "^0.1.0"
+    },
+    "dependencies": {
+        "autoprefixer": "^9.7.6",
+        "gulp": "^4.0.2",
+        "gulp-beautify-code": "^2.0.4",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-connect": "^5.7.0",
+        "gulp-dart-sass": "^1.0.2",
+        "gulp-eslint": "^4.0.2",
+        "gulp-include": "^2.4.1",
+        "gulp-insert": "^0.5.0",
+        "gulp-load-plugins": "^1.6.0",
+        "gulp-minify": "^3.1.0",
+        "gulp-open": "^3.0.1",
+        "gulp-postcss": "^8.0.0",
+        "gulp-replace": "^1.0.0",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-twig": "^1.2.0",
+        "gulp-typescript": "^6.0.0-alpha.1",
+        "npm": "^6.14.15",
+        "typescript": "^3.8.3"
+    },
+    "eslintConfig": {
+        "extends": "eslint:recommended",
+        "rules": {
+            "camelcase": 1,
+            "eqeqeq": 1,
+            "no-undef": 0,
+            "no-unused-vars": 0
+        },
+        "env": {
+            "browser": true,
+            "jquery": true
+        }
+    }
+}
