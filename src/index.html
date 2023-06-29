@@ -14,7 +14,7 @@
 </head>
 <body>
     <h1>Speedbump</h1>
-    <p><a href="https://test.msc.blendinteractive.com">Ignored link from different domain (with subdomain)</a>, consectetur adipisicing elit. Cum, exercitationem. Quos, architecto? Quia dolor commodi unde velit. Quas vero cum ducimus placeat rem ipsam voluptates tempore sapiente? Sunt, illo illum.</p>
+    <p><a href="page.html">Ignored link from same domain</a>, consectetur adipisicing elit. Cum, exercitationem. Quos, architecto? Quia dolor commodi unde velit. Quas vero cum ducimus placeat rem ipsam voluptates tempore sapiente? Sunt, illo illum.</p>
     <p>Dolorum totam quisquam perferendis accusamus, natus doloribus, illum ad consectetur, minima impedit expedita vero tenetur laborum reiciendis explicabo ut eos! Accusantium quibusdam beatae expedita eaque sunt consequuntur debitis, aspernatur ab.</p>
     <p>Nobis quod quam magnam soluta cum. Error, officiis? <a href="https://blendinteractive.com">Ignored link from different domain</a> corrupti iure adipisci sapiente nemo eos. Sit architecto quisquam adipisci, error nesciunt cupiditate sed enim libero at perspiciatis quae.</p>
     <p>Quaerat sed similique repellat temporibus ducimus nam dolores perferendis deleniti, rem unde ipsam cum asperiores harum obcaecati? Libero ex cupiditate atque neque quisquam ullam placeat temporibus ab, pariatur eligendi doloribus!</p>
@@ -40,6 +40,9 @@
             'speedBumpCancelLink': 'Cancel',
             'speedBumpHeadingTag': '&lt;h2&gt;',
             'speedBumpCloseIconClass': 'fa fa-times',
+            'speedBumpContinueLinkClass' : 'btn btn-test',
+            'speedBumpCancelClass' : 'btn btn-test',
+            'speedBumpCloseButtonClass' : 'btn btn-test',
             'speedBumpIgnoreArray': [
                 'blendinteractive.com',
                 'google.com'
@@ -51,7 +54,7 @@
 </pre>
         
     <!-- Required javascript linkage -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="assets/js/speedbump.js"></script>
     
     <script>
@@ -68,7 +71,10 @@
                 'speedBumpContinueLink': 'Continue',
                 'speedBumpCancelLink': 'Cancel',
                 'speedBumpHeadingTag': '<h2>',
-                'speedBumpCloseIconClass': 'fa fa-times'
+                'speedBumpCloseIconClass': 'fa fa-times',
+                'speedBumpContinueLinkClass': 'btn btn-test-continue',
+                'speedBumpCancelClass': 'btn btn-test-cancel',
+                'speedBumpCloseButtonClass': 'btn btn-test-close'
             });
         });
     </script>

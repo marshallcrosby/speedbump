@@ -43,7 +43,12 @@ gulp.task('js', function (done) {
     gulp.src([`${roots.src}/assets/js/speedbump.js`], { sourcemaps: true })
         .pipe(include())
         .pipe(concat('speedbump.js'))
-        .pipe(minify({ ext: { min: ".min.js" }}))
+        .pipe(minify({
+            ext: {
+                min: ".min.js",
+            },
+            preserveComments: 'some'
+        }))
         .pipe(gulp.dest(`${roots.dist}/assets/js`, { sourcemaps: '.' }))
         .pipe(connect.reload());
     done();
