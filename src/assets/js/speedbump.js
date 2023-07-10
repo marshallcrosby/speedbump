@@ -1,5 +1,5 @@
 /*!
-  * Speedbump v2.0.0
+  * Speed bump v2.0.0 Beta
 */
 
 const speedBumpModal = function(options) {
@@ -20,7 +20,7 @@ const speedBumpModal = function(options) {
 	const cancelClass = settings.speedBumpCancelClass !== '' ? settings.speedBumpCancelClass : '';
 	const closeClass = settings.speedBumpCloseButtonClass !== '' ? settings.speedBumpCloseButtonClass : '';
 	
-    // Build outer speedbump modal div
+    // Build outer speed-bump modal div
 	const speedBumpModal = document.createElement('div');
 	speedBumpModal.classList.add('speed-bump');
 	speedBumpModal.tabIndex = '-1';
@@ -83,7 +83,7 @@ const speedBumpModal = function(options) {
 	speedBumpCloseButton.setAttribute('type', 'button');
 	speedBumpCloseButton.setAttribute('aria-label', 'Close');
 	speedBumpCloseButton.setAttribute('type', 'button');
-	speedBumpContent.prepend(speedBumpCloseButton);
+    speedBumpContent.insertBefore(speedBumpCloseButton, speedBumpTitle.nextSibling);
 	
     // Build speed-bump cancel button icon
 	if (settings.speedBumpCloseIconClass !== '') {
@@ -93,7 +93,7 @@ const speedBumpModal = function(options) {
 		speedBumpCloseButton.appendChild(speedBumpCloseIcon);
 	}
 	
-    // Trap the keyboard to the off canvas elements when speedbump modal is showing
+    // Trap the keyboard to the off canvas elements when speed bump modal is showing
 	let focusBeforeSpeedbump;
 	const trapKeyboardToSpeedbump = () => {
 		focusBeforeSpeedbump = document.activeElement;
