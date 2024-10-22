@@ -23,7 +23,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const connect = require('gulp-connect');
 const open = require('gulp-open');
 
-const localhost = 'http://127.0.0.1:8080/';
+const localhost = 'http://localhost:8080/';
 
 const roots = {
     src: './src',
